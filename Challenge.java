@@ -15,14 +15,9 @@ import java.util.List;
 */
 
 public class Main {
-
     public static void main(String[] args) throws Exception {
         new Main(args).run();
     }
-
-    String key = "YMM8C_H7KCQ2S_KL";
-    String id = "PROD0090YUAUV{2B";
-    String nonce = "11462468141886834010";
 
     private String[] args;
 
@@ -30,6 +25,10 @@ public class Main {
         this.args = args;
     }
 
+    String key = "YMM8C_H7KCQ2S_KL";
+    String id = "PROD0090YUAUV{2B";
+    String nonce = "11462468141886834010";
+    
     public void run() throws Exception {
         byte[] nonceHash = getMD5(nonce + key);
         String md5Nonce = DatatypeConverter.printHexBinary(nonceHash);
